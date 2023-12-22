@@ -64,10 +64,6 @@ const MobileDarkMode = () => {
         });
   }, []);
 
-  function link2CustomLinks() {
-    console.log("link2CustomLinks");
-  }
-
   return (
     <LinearGradient
         style={styles.homeScreen}
@@ -92,7 +88,7 @@ const MobileDarkMode = () => {
             source={require("../assets/themedark-mode.png")}
           />
           <Text style={[styles.maykbrito, styles.linkTypo]}>@{message.first_name} {message.last_name}</Text>
-          <Text style={[styles.maykbrito, styles.linkTypo]}>Descrip</Text>
+          <Text style={[styles.maykbrito, styles.linkTypo]}>Description</Text>
         </View>
         <ScrollView
           style={styles.socialLinks}
