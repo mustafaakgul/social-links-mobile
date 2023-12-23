@@ -18,8 +18,8 @@ node_modules
 .yarn-integrity
 
 # Environment secrets
-.env
-.env.local
+# .env
+# .env.local
 .env.*.local
 
 # MacOS
