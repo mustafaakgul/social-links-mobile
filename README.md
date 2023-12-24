@@ -3,6 +3,10 @@ Note: Make sure you have installed native code dependencies [here](https://react
 Create App: npx create-expo-app social_links_mobile
 Run App: npx expo start
 
+### Features
+* Tek Renk Background
+* Geçişli Renk Background
+
 ### To preview and run the project on your device:
 1. Open project folder in <u>Visual Studio Code</u>
 2. Run  `npm install`  in the terminal
