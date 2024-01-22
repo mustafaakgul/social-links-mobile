@@ -29,38 +29,29 @@ const MobileDarkMode = () => {
     setLoading(true);
     axios.get(`${API_BASE_URL}accounts/me`, {
       headers: {
-        // Authorization: `Bearer ${localStorage.getItem('token')}`
         'Content-Type': 'application/json',
-        'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNTU0MTEyLCJpYXQiOjE3MDE0Njc3MTIsImp0aSI6IjUyMWY5NzE5MGIyNDRhOGQ5NzZiNTA0YTk1NjFmNjdjIiwidXNlcl9pZCI6MX0.Z8CDSQiCTmxTM85lfyT_kHdaV4ru31FYBt46A_9WL78`
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     })
         .then(response => {
-          console.log("Me");
           setMessage(response.data);
           setLinks(response.data.profile.links)
-          //console.log(message);
-          console.log(links);
         })
         .catch(error => {
           setError(error);
-          console.log(error);
         });
 
     axios.get(`${API_BASE_URL}links/custom-links`, {
       headers: {
-        // Authorization: `Bearer ${localStorage.getItem('token')}`
         'Content-Type': 'application/json',
-        'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNTU0MTEyLCJpYXQiOjE3MDE0Njc3MTIsImp0aSI6IjUyMWY5NzE5MGIyNDRhOGQ5NzZiNTA0YTk1NjFmNjdjIiwidXNlcl9pZCI6MX0.Z8CDSQiCTmxTM85lfyT_kHdaV4ru31FYBt46A_9WL78`
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     })
         .then(response => {
-          //console.log("Custom");
           setCustomLinks(response.data.results);
-          console.log(customLinks);
         })
         .catch(error => {
           setError(error);
-          console.log(error);
         });
   }, []);
 
@@ -70,11 +61,6 @@ const MobileDarkMode = () => {
         locations={[0, 0.38, 1]}
         colors={["#484c4d", "#121212", "#121212"]}
     >
-    {/*<ImageBackground*/}
-    {/*  style={styles.mobileDarkMode}*/}
-    {/*  resizeMode="cover"*/}
-    {/*  source={require("../assets/mobiledarkmode.png")}*/}
-    {/*>*/}
       <ScrollView
         style={styles.container}
         showsVerticalScrollIndicator={true}
@@ -109,12 +95,6 @@ const MobileDarkMode = () => {
               type='g'
           />
 
-          {/*<Image*/}
-          {/*  style={[styles.socialLinksIcon1, styles.socialIconLayout]}*/}
-          {/*  contentFit="cover"*/}
-          {/*  source={require("../assets/social-links3.png")}*/}
-          {/*/>*/}
-
         </ScrollView>
         <View style={[styles.links, styles.linksSpaceBlock]}>
 
@@ -136,7 +116,7 @@ const MobileDarkMode = () => {
 const styles = StyleSheet.create({
   socialLinksScrollViewContent: {
     flexDirection: "row",
-    alignItems: "flex-start", //"flex-start",
+    alignItems: "flex-start",
     justifyContent: "center",
   },
   containerScrollViewContent: {
@@ -189,7 +169,7 @@ const styles = StyleSheet.create({
     marginLeft: 16,
   },
   socialLinks: {
-    alignSelf: "stretch", //"stretch",
+    alignSelf: "stretch",
     flex: 1,
     //padding: Padding.p_5xl,
     //width: "100%",

@@ -30,8 +30,8 @@ export default function Link2() {
         //     url += "?categoryId=" + categoryId;
         // }
         fetch(url, requestOptions)
-            .then(response => response.json()) // gelen respon icin repsonsu json a dondur
-            .then(data => this.setState({accounts: data})); // gelen datayı set et
+            .then(response => response.json())
+            .then(data => this.setState({accounts: data}));
     }
 
   return (
@@ -91,26 +91,6 @@ export default function Link2() {
     </View>
   );
 }
-
-{/*const styles = StyleSheet.create({*/}
-{/*    scrollContainer: {*/}
-{/*        flex: 1,*/}
-{/*        backgroundColor: '#fff',*/}
-{/*    },*/}
-{/*    container: {*/}
-{/*      flex: 1,*/}
-{/*      backgroundColor: '#fff',*/}
-{/*      alignItems: 'center',*/}
-{/*      justifyContent: 'center',*/}
-{/*    },*/}
-
-{/*    vertical: {*/}
-{/*        marginBottom: 10,*/}
-{/*        display: 'flex',*/}
-{/*        flexDirection: 'row',*/}
-{/*        justifyContent: 'space-evenly',*/}
-{/*    },*/}
-{/*});*/}
 
 const styles = StyleSheet.create({
     container: {

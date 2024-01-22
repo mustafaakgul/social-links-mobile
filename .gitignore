@@ -36,7 +36,7 @@ Thumbs.db
 *.swn
 
 # Expo OTA update
-.expo/
+expo/
 .expo-shared/
 
 # Turtle
